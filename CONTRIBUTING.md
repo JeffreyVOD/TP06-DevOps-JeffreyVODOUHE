@@ -25,11 +25,13 @@ Format : `<type>/<numéro-issue>-<description-courte>`, en minuscules, avec des 
 
 On suit [Conventional Commits](https://www.conventionalcommits.org/fr/) :
 
+```
 <type>(<portée optionnelle>): <résumé à l'impératif, 72 caractères max>
 
 <corps optionnel : pourquoi ce changement, pas comment>
 
 Refs #<numéro-issue>
+```
 
 - Types : `feat`, `fix`, `docs`, `chore`, `refactor`, `test`.
 - Le résumé dit **ce que fait** le commit.
