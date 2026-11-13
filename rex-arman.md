@@ -22,9 +22,10 @@ J'ai commenté à chaque fois une ligne précise du diff, puis j'ai **revérifi�
 | #2 AUDIT | Request changes | Donner le hash exact du commit qui contient le `.env` (`2e26a12`), prévoir `git filter-repo` et la révocation de la clé ; coquille « ausunc » | Corrigé par Baptiste (`178c4e0`), j'ai approuvé |
 | #11 CONTRIBUTING | Approve | Coquille « de un » → « d'un » (que j'ai corrigée, `fa35761`) ; puis les ``` retirés autour du format de commit (ligne 28) | J'ai remis le bloc de code (`116c692`), puis fusionné |
 | #12 .gitignore | Approve | Le `.gitignore` empêche `.env` de revenir, mais le fichier reste dans l'historique | Fusionnée ; l'issue #8 s'est fermée |
-| #17 REX de Jeffrey | Request changes | La réécriture a retiré `target/` et `Panier.java.bak`, mais **pas le `.env`** (ligne 18) ; la protection de `main` a-t-elle été rétablie ? | En attente |
+| #17 REX de Jeffrey | Request changes | La réécriture a retiré `target/` et `Panier.java.bak`, mais **pas le `.env`** (ligne 18) ; la protection de `main` a-t-elle été rétablie ? | Jeffrey a mentionné le `.env` dans son REX (`425906c`), j'ai approuvé ; fusionnée |
+| #19 CHANGELOG | Approve | Cohérent avec l'historique ; il faudra ajouter une section « Sécurité » quand le `.env` sera retiré (ligne 23) | En attente d'une 2ᵉ approbation |
 
-J'ai fusionné **cinq PR** dans `main` : #10, #9, #12, #11 et #14.
+J'ai fusionné **cinq PR** dans `main` : #10, #9, #12, #11 et #14. Mon REX (#15) a été approuvé par Jeffrey et Hevans, puis fusionné.
 
 ### 3. Signaler le secret encore présent
 Après la réécriture de l'historique, `git log --all -- .env` renvoyait toujours `2e26a12`. Je l'ai signalé à Jeffrey dans un commentaire sur la PR #12, avec la commande à lancer : `git filter-repo --path .env --invert-paths`.
