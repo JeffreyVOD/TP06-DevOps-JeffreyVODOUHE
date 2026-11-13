@@ -41,3 +41,5 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 Le programme affiche `16.35` (10 + 5,5 = 15,50 € HT, × 1,055 = 16,3525, arrondi à 16,35 € TTC). `javac src/*.java` compile.
+
+**Réponse du commanditaire (13/11/2026, 14:27)** : il faut appliquer la **nouvelle TVA**, à 5,5 %. La résolution est donc confirmée : taux de `nouvelle-tva`, et arrondi au centime de `arrondi`.
