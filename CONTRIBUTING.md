@@ -25,48 +25,35 @@ Format : `<type>/<numéro-issue>-<description-courte>`, en minuscules, avec des 
 
 On suit [Conventional Commits](https://www.conventionalcommits.org/fr/) :
 
-```
-<type>(<portée optionnelle>): <résumé, 72 caractères max>
+<type>(<portée optionnelle>): <résumé à l'impératif, 72 caractères max>
 
 <corps optionnel : pourquoi ce changement, pas comment>
 
-(#<numéro-issue>)
-```
+Refs #<numéro-issue>
 
 - Types : `feat`, `fix`, `docs`, `chore`, `refactor`, `test`.
-- Le résumé dit **ce que fait** le commit : « retire target/ du suivi », pas « fix » ni « modifs ».
-- Un commit = un changement cohérent. On ne mélange pas un correctif et du ménage.
-
-Exemples :
-
-```
-fix(panier): arrondit le total TTC au centime
-chore: retire Panier.java.bak du dépôt
-docs: ajoute le CHANGELOG de la 1.0.0
-```
+- Le résumé dit **ce que fait** le commit.
+- Un commit = un changement cohérent.
 
 ## Pull Requests
 
 - Le titre suit le même format qu'un message de commit.
-- La description contient :
-  - **Quoi** : ce qui change ;
-  - **Pourquoi** : le besoin ou le problème ;
-  - `Closes #<numéro>` pour fermer l'issue automatiquement à la fusion.
-- Une PR = une issue. Si la PR grossit, on la découpe.
-- **Une approbation** de deux autres membres de l'équipe est obligatoire avant la fusion.
-- Le code doit compiler sur la branche avant de demander une revue.
+- La description contient le quoi, le pourquoi et `Closes #<numéro>`.
+- Une PR = une issue.
+- Deux autres membres doivent approuver la PR avant la fusion.
+- Le code doit compiler avant de demander une revue.
 
 ## Revue
 
-- Le relecteur commente **une ligne précise du diff** quand il signale quelque chose (clic sur la ligne, puis commentaire).
-- Il vérifie : la compilation, le respect de ces conventions, l'absence de fichiers parasites (`.class`, `.bak`, `.env`).
-- L'auteur répond à chaque commentaire (correction ou explication) avant de fusionner.
+- Le relecteur commente une ligne précise du diff.
+- Il vérifie la compilation, les conventions et l'absence de fichiers parasites.
+- L'auteur répond à chaque commentaire avant la fusion.
 
 ## Après la fusion
 
-- On supprime la branche (bouton « Delete branch » sur GitHub, puis `git branch -d` en local).
-- On déplace la carte de l'issue dans la colonne « Fait » du board.
+- On supprime la branche sur GitHub et en local.
+- On déplace la carte de l'issue dans la colonne « Fait ».
 
 ## Secrets
 
-Aucun secret dans le dépôt. Les valeurs vont dans `.env` (ignoré par Git) et on documente les nouvelles variables dans `.env.example`, sans valeur.
+Aucun secret dans le dépôt. Les valeurs vont dans `.env` (ignoré par Git) et les nouvelles variables sont documentées dans `.env.example`, sans valeur.
