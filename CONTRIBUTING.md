@@ -5,7 +5,7 @@
 1. Chaque modification part d'une **issue**.
 2. On travaille sur une **branche** créée depuis `main` à jour.
 3. On ouvre une **Pull Request** qui ferme l'issue.
-4. Un autre membre de l'équipe la **relit** et l'approuve.
+4. Deux autres membres de l'équipe la **relisent** et l'approuvent.
 5. On fusionne.
 
 Personne ne pousse directement sur `main` : la branche est protégée.
@@ -26,11 +26,11 @@ Format : `<type>/<numéro-issue>-<description-courte>`, en minuscules, avec des 
 On suit [Conventional Commits](https://www.conventionalcommits.org/fr/) :
 
 ```
-<type>(<portée optionnelle>): <résumé à l'impératif, 72 caractères max>
+<type>(<portée optionnelle>): <résumé, 72 caractères max>
 
 <corps optionnel : pourquoi ce changement, pas comment>
 
-Refs #<numéro-issue>
+(#<numéro-issue>)
 ```
 
 - Types : `feat`, `fix`, `docs`, `chore`, `refactor`, `test`.
@@ -51,10 +51,9 @@ docs: ajoute le CHANGELOG de la 1.0.0
 - La description contient :
   - **Quoi** : ce qui change ;
   - **Pourquoi** : le besoin ou le problème ;
-  - **Comment tester** : les commandes à lancer (au minimum `javac src/*.java`) ;
   - `Closes #<numéro>` pour fermer l'issue automatiquement à la fusion.
 - Une PR = une issue. Si la PR grossit, on la découpe.
-- **Une approbation** de un autre membre de l'équipe est obligatoire avant la fusion.
+- **Une approbation** de deux autres membres de l'équipe est obligatoire avant la fusion.
 - Le code doit compiler sur la branche avant de demander une revue.
 
 ## Revue
