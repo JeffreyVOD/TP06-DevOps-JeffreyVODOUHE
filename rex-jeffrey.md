@@ -15,7 +15,7 @@
 - Identification de fichiers qui n'auraient pas dû être versionnés : `target/` et `src/Panier.java.bak`.
 - Vérification que leur suppression dans un nouveau commit ne suffisait pas : ils restaient présents dans les anciens commits.
 - Création d'une sauvegarde complète du dépôt avec `git clone --mirror`, avant toute modification de l'historique.
-- Utilisation de `git filter-repo` pour supprimer ces fichiers de l'ensemble de l'historique.
+- Utilisation de `git filter-repo` pour supprimer ces fichiers de l'ensemble de l'historique (.env n'a pas encore été retiré : Axe d'amelioration pour plus tard)
 - Vérification des différentes branches et traitement de celles qui n'étaient pas à jour dans la sauvegarde initiale.
 - Réécriture des références distantes.
 - Gestion du refus de mise à jour de `main` en raison de sa protection : désactivation temporaire de la règle, mise à jour de la branche, puis nécessité de rétablir la protection.
