@@ -54,7 +54,7 @@ docs: ajoute le CHANGELOG de la 1.0.0
   - **Comment tester** : les commandes à lancer (au minimum `javac src/*.java`) ;
   - `Closes #<numéro>` pour fermer l'issue automatiquement à la fusion.
 - Une PR = une issue. Si la PR grossit, on la découpe.
-- **Une approbation** de un autre membre de l'équipe est obligatoire avant la fusion.
+- **Une approbation** d'un autre membre de l'équipe est obligatoire avant la fusion.
 - Le code doit compiler sur la branche avant de demander une revue.
 
 ## Revue
